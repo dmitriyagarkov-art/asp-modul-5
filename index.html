@@ -1,0 +1,1111 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Модуль 5. Антихрупкий контент · Конспект</title>
+<meta name="description" content="Конспект модуля 5 практикума «Антихрупкая система продаж»: почему эксперты выгорают от контента, три лайфхака бесконечного контента, контент-заготовки и как сделать, чтобы контент залетал.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0B0E0D">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<script>
+  (function () {
+    try {
+      var t = localStorage.getItem('dm-theme');
+      if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
+    } catch (e) {}
+  })();
+</script>
+<style>
+  :root {
+    --bg: #F4F5F0;
+    --surface: #FFFFFF;
+    --surface-2: #ECEDE6;
+    --ink: #0B0E0D;
+    --ink-2: #2A302D;
+    --muted: #5D645F;
+    --line: #DCDED5;
+    --lime: #C8F135;
+    --lime-soft: rgba(200, 241, 53, .38);
+    --mark: rgba(200, 241, 53, .55);
+    --link: #0B0E0D;
+    --shadow: 0 1px 2px rgba(11,14,13,.04), 0 8px 24px rgba(11,14,13,.06);
+    --c-blue: #3B82F6;
+    --c-red: #EF4444;
+    --c-orange: #F59E0B;
+    --c-yellow: #EAB308;
+    --c-purple: #8B5CF6;
+    --c-green: #22C55E;
+    --c-gray: #8A918C;
+    --tint: 9%;
+    --radius: 18px;
+    --dark-card: #0B0E0D;
+    --dark-card-line: #0B0E0D;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0B0E0D;
+      --surface: #131816;
+      --surface-2: #1A201D;
+      --ink: #F4F5F0;
+      --ink-2: #D9DCD3;
+      --muted: #9AA29C;
+      --line: #262D29;
+      --lime-soft: rgba(200, 241, 53, .16);
+      --mark: rgba(200, 241, 53, .22);
+      --link: #C8F135;
+      --shadow: 0 1px 2px rgba(0,0,0,.3), 0 8px 24px rgba(0,0,0,.25);
+      --tint: 13%;
+      --dark-card: #1A201D;
+      --dark-card-line: rgba(200,241,53,.35);
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0B0E0D;
+    --surface: #131816;
+    --surface-2: #1A201D;
+    --ink: #F4F5F0;
+    --ink-2: #D9DCD3;
+    --muted: #9AA29C;
+    --line: #262D29;
+    --lime-soft: rgba(200, 241, 53, .16);
+    --mark: rgba(200, 241, 53, .22);
+    --link: #C8F135;
+    --shadow: 0 1px 2px rgba(0,0,0,.3), 0 8px 24px rgba(0,0,0,.25);
+    --tint: 13%;
+    --dark-card: #1A201D;
+    --dark-card-line: rgba(200,241,53,.35);
+    color-scheme: dark;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Montserrat", system-ui, -apple-system, "Segoe UI", sans-serif;
+    font-size: 16px;
+    line-height: 1.65;
+    font-weight: 500;
+    -webkit-font-smoothing: antialiased;
+    transition: background .25s ease, color .25s ease;
+  }
+  img { max-width: 100%; display: block; }
+  b, strong { font-weight: 700; color: var(--ink); }
+  a { color: var(--link); text-decoration-color: var(--lime); text-decoration-thickness: 2px; text-underline-offset: 3px; }
+  :focus-visible { outline: 3px solid var(--lime); outline-offset: 2px; border-radius: 6px; }
+
+  /* ---------- top bar ---------- */
+  .topbar {
+    position: sticky; top: 0; z-index: 50;
+    background: color-mix(in srgb, var(--bg) 86%, transparent);
+    backdrop-filter: saturate(160%) blur(14px);
+    -webkit-backdrop-filter: saturate(160%) blur(14px);
+    border-bottom: 1px solid var(--line);
+  }
+  .topbar__in {
+    max-width: 1240px; margin: 0 auto; padding: 10px 16px;
+    display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  }
+  .brand { display: flex; align-items: center; gap: 10px; min-width: 0; text-decoration: none; color: var(--ink); }
+  .brand__dot { width: 30px; height: 30px; border-radius: 9px; background: var(--lime); color: #0B0E0D; display: grid; place-items: center; font-weight: 900; font-size: 15px; flex: none; }
+  .brand__txt { display: flex; flex-direction: column; line-height: 1.15; min-width: 0; }
+  .brand__name { font-weight: 800; font-size: 14px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .brand__sub { font-size: 11.5px; color: var(--muted); font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .theme-btn {
+    flex: none; display: inline-flex; align-items: center; gap: 8px;
+    height: 38px; padding: 0 14px; border-radius: 999px;
+    border: 1px solid var(--line); background: var(--surface); color: var(--ink);
+    font: 700 13px "Montserrat", sans-serif; cursor: pointer;
+  }
+  .theme-btn:hover { border-color: var(--ink); }
+  .theme-btn svg { width: 17px; height: 17px; }
+  .theme-btn .i-sun { display: none; }
+  :root[data-theme="dark"] .theme-btn .i-sun { display: block; }
+  :root[data-theme="dark"] .theme-btn .i-moon { display: none; }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .theme-btn .i-sun { display: block; }
+    :root:not([data-theme="light"]) .theme-btn .i-moon { display: none; }
+  }
+  .progress { position: absolute; left: 0; bottom: -1px; height: 3px; width: 0; background: var(--lime); transition: width .1s linear; }
+
+  /* ---------- layout ---------- */
+  .layout { max-width: 1240px; margin: 0 auto; padding: 0 16px; display: grid; grid-template-columns: 1fr; }
+  main { min-width: 0; max-width: 780px; width: 100%; margin: 0 auto; padding-bottom: 80px; }
+  .side { display: none; }
+  @media (min-width: 1100px) {
+    .layout { grid-template-columns: 270px minmax(0, 1fr); gap: 56px; }
+    main { margin: 0; }
+    .side { display: block; }
+    .side__in { position: sticky; top: 76px; padding: 28px 0 40px; max-height: calc(100vh - 76px); overflow: auto; }
+  }
+  .side__label { font-size: 12px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin: 0 0 12px 12px; }
+  .side nav a {
+    display: block; padding: 8px 12px; border-radius: 10px; text-decoration: none;
+    color: var(--muted); font-size: 13.5px; font-weight: 600; line-height: 1.35;
+    border-left: 3px solid transparent;
+  }
+  .side nav a:hover { color: var(--ink); background: var(--surface); }
+  .side nav a.is-active { color: var(--ink); background: var(--surface); border-left-color: var(--lime); }
+  .side nav a .n { display: block; font-size: 11px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); margin-bottom: 2px; }
+
+  /* ---------- hero ---------- */
+  .hero { padding: 36px 0 8px; }
+  .eyebrow { display: inline-flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 18px; }
+  .chip { display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; border-radius: 999px; font-size: 12px; font-weight: 800; letter-spacing: .04em; text-transform: uppercase; }
+  .chip--lime { background: var(--lime); color: #0B0E0D; }
+  .chip--ghost { border: 1px solid var(--line); color: var(--muted); background: var(--surface); }
+  h1 {
+    font-size: clamp(32px, 7.4vw, 54px); line-height: 1.04; letter-spacing: -.025em;
+    font-weight: 900; margin: 0 0 18px;
+  }
+  h1 .hl { background: linear-gradient(transparent 58%, var(--lime-soft) 58%, var(--lime-soft) 92%, transparent 92%); padding: 0 .06em; }
+  .lead { font-size: 17.5px; line-height: 1.6; color: var(--ink-2); margin: 0 0 22px; }
+  .result-card {
+    background: var(--dark-card); color: #F4F5F0; border: 1px solid var(--dark-card-line); border-radius: var(--radius); padding: 20px 22px;
+    display: flex; gap: 14px; align-items: flex-start;
+  }
+  .result-card b { color: var(--lime); }
+  .result-card__ico { flex: none; width: 40px; height: 40px; border-radius: 12px; background: var(--lime); display: grid; place-items: center; font-size: 20px; }
+  .result-card p { margin: 0; font-size: 15.5px; line-height: 1.55; }
+
+  /* ---------- sections ---------- */
+  section { scroll-margin-top: 76px; }
+  .sec { padding-top: 44px; }
+  .sec + .sec { border-top: 1px solid var(--line); margin-top: 44px; }
+  .lesson-label { font-size: 13px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+  .lesson-label .num { background: var(--lime); color: #0B0E0D; border-radius: 8px; padding: 3px 9px; letter-spacing: .02em; }
+  h2.sec-title { font-size: clamp(25px, 5vw, 34px); line-height: 1.15; letter-spacing: -.02em; font-weight: 900; margin: 0 0 8px; }
+  h3 { font-size: 20px; line-height: 1.3; font-weight: 800; letter-spacing: -.01em; margin: 34px 0 12px; scroll-margin-top: 84px; }
+  p { margin: 0 0 14px; }
+  ul, ol { margin: 0 0 16px; padding-left: 0; list-style: none; }
+  ul > li, ol > li { position: relative; padding-left: 26px; margin-bottom: 9px; }
+  ul > li::before { content: ""; position: absolute; left: 6px; top: .66em; width: 7px; height: 7px; border-radius: 50%; background: var(--lime); box-shadow: 0 0 0 2px color-mix(in srgb, var(--ink) 12%, transparent); }
+  ol { counter-reset: n; }
+  ol > li { counter-increment: n; padding-left: 38px; }
+  ol > li::before { content: counter(n); position: absolute; left: 0; top: 1px; width: 26px; height: 26px; border-radius: 8px; background: var(--ink); color: var(--bg); font-size: 13px; font-weight: 800; display: grid; place-items: center; line-height: 1; }
+  .example { font-weight: 700; color: var(--muted); margin: 18px 0 10px; }
+
+  /* ---------- TOC block in content ---------- */
+  .toc { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 22px; box-shadow: var(--shadow); }
+  .toc h2 { margin: 0 0 14px; font-size: 22px; font-weight: 900; letter-spacing: -.01em; }
+  .toc ol { margin: 0; }
+  .toc ol > li { margin-bottom: 6px; padding-left: 0; }
+  .toc ol > li::before { display: none; }
+  .toc a {
+    display: flex; gap: 12px; align-items: center; padding: 10px 12px; border-radius: 12px;
+    text-decoration: none; color: var(--ink); font-weight: 600; font-size: 15px; line-height: 1.35;
+    background: var(--surface-2); transition: transform .15s ease, background .15s ease;
+  }
+  .toc a:hover { background: var(--lime-soft); transform: translateX(3px); }
+  .toc a .k { flex: none; min-width: 34px; height: 30px; padding: 0 6px; border-radius: 9px; background: var(--ink); color: var(--bg); display: grid; place-items: center; font-size: 12.5px; font-weight: 800; }
+  .toc a .arr { margin-left: auto; color: var(--muted); font-weight: 800; }
+
+  /* ---------- callouts ---------- */
+  .co {
+    --c: var(--c-gray);
+    position: relative; display: flex; gap: 14px; align-items: flex-start;
+    padding: 18px 20px; margin: 18px 0; border-radius: 16px;
+    background: color-mix(in srgb, var(--c) var(--tint), var(--surface));
+    border: 1px solid color-mix(in srgb, var(--c) 28%, var(--line));
+  }
+  .co__ico { flex: none; font-size: 22px; line-height: 1.3; }
+  .co__body { min-width: 0; }
+  .co__body > :last-child { margin-bottom: 0; }
+  .co__body p { margin-bottom: 10px; }
+  .co__body ul > li { margin-bottom: 6px; }
+  .co--blue { --c: var(--c-blue); }
+  .co--red { --c: var(--c-red); }
+  .co--orange { --c: var(--c-orange); }
+  .co--yellow { --c: var(--c-yellow); }
+  .co--purple { --c: var(--c-purple); }
+  .co--green { --c: var(--c-green); }
+  .co--lead { font-size: 17px; }
+  .co--lead .co__body p:first-child { font-size: 17.5px; line-height: 1.5; }
+
+  .summary {
+    margin: 30px 0 0; border-radius: var(--radius); padding: 22px 22px 18px;
+    background: var(--dark-card); color: #F4F5F0; border: 1px solid var(--dark-card-line);
+  }
+  .summary__h { display: flex; align-items: center; gap: 10px; font-weight: 900; font-size: 18px; margin-bottom: 14px; color: #F4F5F0; }
+  .summary__h .tick { width: 28px; height: 28px; border-radius: 8px; background: var(--lime); color: #0B0E0D; display: grid; place-items: center; font-size: 15px; }
+  .summary ul { margin: 0; }
+  .summary li { color: rgba(244,245,240,.88); }
+  .summary b { color: var(--lime); }
+  .summary ul > li::before { background: var(--lime); box-shadow: none; }
+
+  /* ---------- columns ---------- */
+  .cols { display: grid; grid-template-columns: 1fr; gap: 12px; margin: 18px 0; }
+  .cols .co { margin: 0; flex-direction: column; gap: 6px; }
+  @media (min-width: 640px) { .cols { grid-template-columns: 1fr 1fr; } }
+
+  /* ---------- tables ---------- */
+  .table-wrap { margin: 18px 0; overflow-x: auto; -webkit-overflow-scrolling: touch; border-radius: 16px; border: 1px solid var(--line); background: var(--surface); box-shadow: var(--shadow); }
+  table { border-collapse: collapse; width: 100%; min-width: 560px; font-size: 14.5px; line-height: 1.5; }
+  th, td { text-align: left; vertical-align: top; padding: 13px 16px; border-bottom: 1px solid var(--line); }
+  tr:last-child td { border-bottom: 0; }
+  th { background: var(--surface-2); font-weight: 800; font-size: 12.5px; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); white-space: nowrap; }
+  td:first-child { font-weight: 600; }
+  tr.r-yellow td { background: color-mix(in srgb, var(--c-yellow) var(--tint), var(--surface)); }
+  tr.r-orange td { background: color-mix(in srgb, var(--c-orange) calc(var(--tint) + 3%), var(--surface)); }
+  tr.r-red td { background: color-mix(in srgb, var(--c-red) calc(var(--tint) + 3%), var(--surface)); }
+  tr.r-green td { background: color-mix(in srgb, var(--c-green) var(--tint), var(--surface)); }
+  tr.r-total td { background: var(--lime-soft); font-weight: 800; }
+  .table-hint { display: none; font-size: 12.5px; color: var(--muted); margin: -8px 0 16px; }
+  @media (max-width: 620px) { .table-hint { display: block; } }
+  .t-compact table { min-width: 0; }
+
+  /* ---------- figures ---------- */
+  figure.scheme { margin: 20px 0; }
+  .scheme__frame {
+    display: block; width: 100%; padding: 10px; border-radius: 16px; cursor: zoom-in;
+    background: #FFFFFF; border: 1px solid var(--line); box-shadow: var(--shadow);
+    position: relative;
+  }
+  .scheme__frame img { width: 100%; height: auto; border-radius: 8px; }
+  .scheme__zoom {
+    position: absolute; right: 12px; bottom: 12px; height: 30px; padding: 0 10px; border-radius: 999px;
+    background: #0B0E0D; color: #F4F5F0; font: 700 12px "Montserrat", sans-serif;
+    display: inline-flex; align-items: center; gap: 6px; opacity: .88;
+  }
+  @media (max-width: 520px) {
+    .scheme__frame { padding: 6px; }
+    .scheme__zoom { right: 6px; bottom: 6px; height: 26px; width: 26px; padding: 0; justify-content: center; font-size: 0; gap: 0; }
+    .scheme__zoom::before { content: "⤢"; font-size: 14px; }
+  }
+  figure.scheme figcaption { font-size: 13px; color: var(--muted); margin-top: 8px; text-align: center; }
+
+  /* ---------- tabs ---------- */
+  .tabs { margin: 20px 0; }
+  .tabs__list { display: flex; gap: 6px; padding: 5px; border-radius: 14px; background: var(--surface-2); overflow-x: auto; scrollbar-width: none; }
+  .tabs__list::-webkit-scrollbar { display: none; }
+  .tab {
+    flex: 1 0 auto; border: 0; cursor: pointer; padding: 10px 14px; border-radius: 10px;
+    font: 700 14px "Montserrat", sans-serif; color: var(--muted); background: transparent; white-space: nowrap;
+  }
+  .tab[aria-selected="true"] { background: var(--surface); color: var(--ink); box-shadow: var(--shadow); }
+  .tab .tn { display: inline-grid; place-items: center; width: 22px; height: 22px; border-radius: 7px; margin-right: 6px; background: var(--line); color: var(--ink); font-size: 12px; font-weight: 800; }
+  .tab[aria-selected="true"] .tn { background: var(--lime); color: #0B0E0D; }
+  .tabpanel { padding: 4px 2px 0; }
+  .tabpanel[hidden] { display: none; }
+  .tabpanel h4 { font-size: 18px; font-weight: 900; margin: 16px 0 10px; }
+
+  /* ---------- glossary ---------- */
+  .gloss { display: grid; grid-template-columns: 1fr; gap: 10px; margin: 18px 0; }
+  @media (min-width: 640px) { .gloss { grid-template-columns: 1fr 1fr; } }
+  .term { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 14px 16px; }
+  .term dt { font-weight: 800; font-size: 15.5px; margin-bottom: 4px; display: flex; align-items: center; gap: 8px; }
+  .term dt::before { content: ""; width: 8px; height: 8px; border-radius: 3px; background: var(--lime); flex: none; }
+  .term dd { margin: 0; font-size: 14.5px; color: var(--ink-2); line-height: 1.5; }
+
+  /* ---------- download ---------- */
+  .dl-badge {
+    display: flex; align-items: center; gap: 14px; padding: 16px 18px; margin: 14px 0 22px; border-radius: 16px;
+    border: 2px dashed color-mix(in srgb, var(--c-orange) 60%, var(--line));
+    background: color-mix(in srgb, var(--c-orange) var(--tint), var(--surface));
+    font-weight: 700;
+  }
+  .dl-badge .ico { font-size: 24px; flex: none; }
+
+  /* ---------- homework ---------- */
+  .hw { margin: 18px 0; }
+  .hw label {
+    display: flex; gap: 14px; align-items: flex-start; cursor: pointer;
+    padding: 14px 16px; margin-bottom: 8px; border-radius: 14px;
+    background: var(--surface); border: 1px solid var(--line); transition: background .15s ease, border-color .15s ease;
+  }
+  .hw label:hover { border-color: var(--muted); }
+  .hw input { position: absolute; opacity: 0; pointer-events: none; }
+  .hw .box { flex: none; width: 24px; height: 24px; margin-top: 1px; border-radius: 7px; border: 2px solid var(--muted); display: grid; place-items: center; transition: all .15s ease; }
+  .hw .box svg { width: 14px; height: 14px; opacity: 0; color: #0B0E0D; }
+  .hw input:checked + .box { background: var(--lime); border-color: var(--lime); }
+  .hw input:checked + .box svg { opacity: 1; }
+  .hw input:checked ~ .txt { color: var(--muted); text-decoration: line-through; text-decoration-color: color-mix(in srgb, var(--muted) 60%, transparent); }
+  .hw input:checked ~ .txt b { color: var(--muted); }
+  .hw input:focus-visible + .box { outline: 3px solid var(--lime); outline-offset: 2px; }
+  .hw-count { font-size: 13px; font-weight: 700; color: var(--muted); }
+
+  /* ---------- quiz ---------- */
+  details.q { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; margin-bottom: 8px; overflow: hidden; }
+  details.q summary {
+    list-style: none; cursor: pointer; padding: 15px 18px; font-weight: 700; font-size: 15.5px;
+    display: flex; gap: 12px; align-items: center;
+  }
+  details.q summary::-webkit-details-marker { display: none; }
+  details.q summary::after { content: "+"; margin-left: auto; flex: none; width: 28px; height: 28px; border-radius: 9px; background: var(--surface-2); display: grid; place-items: center; font-size: 18px; font-weight: 700; transition: transform .2s ease, background .2s ease; }
+  details.q[open] summary::after { transform: rotate(45deg); background: var(--lime); color: #0B0E0D; }
+  details.q .ans { padding: 0 18px 16px; color: var(--ink-2); border-top: 1px dashed var(--line); padding-top: 12px; margin: 0 18px; padding-left: 0; padding-right: 0; }
+
+  /* ---------- next ---------- */
+  .next {
+    display: flex; align-items: center; gap: 16px; margin-top: 30px; padding: 22px; border-radius: var(--radius);
+    background: var(--lime); color: #0B0E0D; text-decoration: none;
+    transition: transform .15s ease, box-shadow .15s ease;
+  }
+  a.next:hover { transform: translateY(-2px); box-shadow: 0 10px 26px rgba(200,241,53,.35); }
+  a.next:hover .next__arr { transform: translateX(3px); }
+  .next__arr { transition: transform .15s ease; }
+  .next__go { margin-left: auto; flex: none; font-weight: 800; font-size: 13px; white-space: nowrap; }
+  @media (max-width: 520px) { .next__go { display: none; } }
+  .next b { color: #0B0E0D; }
+  .next__arr { flex: none; width: 46px; height: 46px; border-radius: 14px; background: #0B0E0D; color: var(--lime); display: grid; place-items: center; font-size: 22px; font-weight: 900; }
+  .next p { margin: 0; font-size: 15.5px; line-height: 1.5; }
+
+  footer { border-top: 1px solid var(--line); margin-top: 40px; padding: 26px 0 40px; color: var(--muted); font-size: 13px; text-align: center; }
+
+  /* ---------- floating ---------- */
+  .fab {
+    position: fixed; right: 16px; bottom: calc(16px + env(safe-area-inset-bottom)); z-index: 40;
+    height: 46px; padding: 0 16px; border-radius: 999px; border: 0; cursor: pointer;
+    background: var(--ink); color: var(--bg); font: 800 13px "Montserrat", sans-serif;
+    display: inline-flex; align-items: center; gap: 8px; box-shadow: 0 10px 28px rgba(0,0,0,.25);
+    opacity: 0; transform: translateY(12px); pointer-events: none; transition: all .2s ease; text-decoration: none;
+  }
+  .fab.show { opacity: 1; transform: none; pointer-events: auto; }
+  .fab .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--lime); }
+  @media (min-width: 1100px) { .fab { display: none; } }
+
+  /* ---------- lightbox ---------- */
+  .lb { position: fixed; inset: 0; z-index: 100; background: #0B0E0D; display: none; flex-direction: column; }
+  .lb.open { display: flex; }
+  .lb__bar { display: flex; justify-content: space-between; align-items: center; padding: 12px 16px; color: #F4F5F0; font-size: 13px; font-weight: 600; gap: 12px; }
+  .lb__close { border: 0; background: var(--lime); color: #0B0E0D; font: 800 13px "Montserrat", sans-serif; height: 38px; padding: 0 16px; border-radius: 999px; cursor: pointer; }
+  .lb__scroll { flex: 1; overflow: auto; -webkit-overflow-scrolling: touch; display: flex; align-items: center; padding: 0 16px 24px; }
+  .lb__scroll img { max-width: none; width: auto; height: auto; max-height: 82vh; margin: auto; background: #fff; border-radius: 10px; }
+  .lb__scroll img { max-width: 100%; }
+  @media (max-width: 900px) { .lb__scroll img { width: 240vw; max-width: none; max-height: none; } }
+
+
+  /* ---------- module nav ---------- */
+  .back { display: inline-flex; align-items: center; gap: 6px; margin-bottom: 18px; font-size: 13px; font-weight: 700; color: var(--muted); text-decoration: none; padding: 7px 12px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); }
+  .back:hover { color: var(--ink); border-color: var(--ink); }
+  .nav-pair { display: grid; grid-template-columns: 1fr; gap: 10px; margin-top: 30px; }
+  .nav-pair .next { margin-top: 0; }
+  @media (min-width: 760px) { .nav-pair { grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); } }
+  .prev { display: flex; align-items: center; gap: 14px; padding: 18px; border-radius: var(--radius); text-decoration: none; color: var(--ink); background: var(--surface); border: 1px solid var(--line); font-weight: 700; font-size: 14.5px; line-height: 1.4; transition: border-color .15s ease; }
+  .prev:hover { border-color: var(--ink); }
+  .prev__arr { flex: none; width: 40px; height: 40px; border-radius: 12px; background: var(--surface-2); display: grid; place-items: center; font-weight: 900; font-size: 18px; }
+  .prev__k { display: block; font-size: 11.5px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); margin-bottom: 2px; }
+
+  /* ---------- sub headings & nested lists ---------- */
+  h4.sub { display: flex; align-items: center; gap: 10px; font-size: 17px; font-weight: 800; margin: 24px 0 10px; }
+  .sub__n { flex: none; width: 28px; height: 28px; border-radius: 8px; background: var(--lime); color: #0B0E0D; display: grid; place-items: center; font-size: 14px; font-weight: 900; }
+  li > ul { margin: 8px 0 0; }
+  li > ul > li { margin-bottom: 6px; color: var(--ink-2); font-style: italic; }
+  li > ul > li::before { width: 6px; height: 2px; border-radius: 1px; top: .8em; box-shadow: none; background: var(--muted); }
+  details.q--example { margin: 18px 0; border-color: color-mix(in srgb, var(--c-yellow) 40%, var(--line)); }
+  details.q--example .ans ul { margin: 0; }
+
+
+  /* ---------- final & question list ---------- */
+  .final { display: flex; gap: 14px; align-items: flex-start; margin-top: 30px; padding: 20px 22px; border-radius: var(--radius); background: var(--surface); border: 1px dashed color-mix(in srgb, var(--lime) 70%, var(--line)); }
+  .final__ico { flex: none; font-size: 24px; line-height: 1.3; }
+  .final p { margin: 0; }
+  li > ul.qlist > li { font-style: normal; color: var(--ink-2); }
+  .co__body ol { margin-top: 6px; }
+
+  mark { background: var(--mark); color: inherit; padding: 0 .12em; border-radius: 4px; }
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar__in">
+    <a class="brand" href="#top" aria-label="В начало конспекта">
+      <span class="brand__dot">D</span>
+      <span class="brand__txt">
+        <span class="brand__name">Модуль 5 · Конспект</span>
+        <span class="brand__sub">Антихрупкая система продаж</span>
+      </span>
+    </a>
+    <button class="theme-btn" id="themeBtn" type="button" aria-label="Переключить светлую и тёмную тему">
+      <svg class="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      <svg class="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.2M12 19.8V22M4.9 4.9l1.6 1.6M17.5 17.5l1.6 1.6M2 12h2.2M19.8 12H22M4.9 19.1l1.6-1.6M17.5 6.5l1.6-1.6"/></svg>
+      <span id="themeLbl">Тема</span>
+    </button>
+  </div>
+  <div class="progress" id="progress" aria-hidden="true"></div>
+</header>
+
+<div class="layout">
+  <aside class="side" aria-label="Навигация по конспекту">
+    <div class="side__in">
+      <p class="side__label">Оглавление</p>
+      <nav id="sideNav">
+        <a href="#logika"><span class="n">Схема</span>Вся логика модуля</a>
+        <a href="#urok-1"><span class="n">Урок 1</span>Почему эксперты выгорают</a>
+        <a href="#urok-2"><span class="n">Урок 2</span>Три лайфхака контента</a>
+        <a href="#urok-3"><span class="n">Урок 3</span>Контент-заготовки</a>
+        <a href="#urok-4"><span class="n">Урок 4</span>Чтобы контент залетал</a>
+        <a href="#slovar"><span class="n">Справка</span>Словарь модуля</a>
+        <a href="#materialy"><span class="n">Скачать</span>Материалы для скачивания</a>
+        <a href="#dz"><span class="n">Практика</span>Домашнее задание</a>
+        <a href="#proverka"><span class="n">Тест</span>Проверь себя</a>
+      </nav>
+    </div>
+  </aside>
+
+  <main id="top">
+    <!-- ===== HERO ===== -->
+    <div class="hero">
+      <a class="back" href="https://asp-modul-4.vercel.app/">← Модуль 4. Прибыльный мини-продукт</a>
+      <div class="eyebrow">
+        <span class="chip chip--lime">♾️ Модуль 5</span>
+        <span class="chip chip--ghost">Конспект</span>
+      </div>
+      <h1>Антихрупкий <span class="hl">контент</span></h1>
+      <p class="lead">Здесь разбираем, <b>почему эксперты выгорают от контента</b>, как из одного лид-магнита получить <b>контент на месяцы вперёд</b>, что такое <b>контент-заготовка</b> и от чего на самом деле зависит, <b>залетит контент или нет</b>.</p>
+      <div class="result-card">
+        <div class="result-card__ico" aria-hidden="true">🏁</div>
+        <p><b>Результат модуля:</b> 30+ контент-заготовок под ваш лид-магнит и первые готовые рилсы, карусели, треды или посты.</p>
+      </div>
+    </div>
+
+    <!-- ===== TOC ===== -->
+    <section class="sec" id="oglavlenie" aria-labelledby="toc-h">
+      <div class="toc">
+        <h2 id="toc-h">📑 Оглавление</h2>
+        <ol>
+          <li><a href="#urok-1"><span class="k">1</span><span>Урок 1. Почему эксперты выгорают от контента</span><span class="arr">↓</span></a></li>
+          <li><a href="#urok-2"><span class="k">2</span><span>Урок 2. Три лайфхака бесконечного контента</span><span class="arr">↓</span></a></li>
+          <li><a href="#urok-3"><span class="k">3</span><span>Урок 3. Контент-заготовки</span><span class="arr">↓</span></a></li>
+          <li><a href="#urok-4"><span class="k">4</span><span>Урок 4. Как сделать, чтобы контент залетал</span><span class="arr">↓</span></a></li>
+          <li><a href="#slovar"><span class="k">📖</span><span>Словарь модуля</span><span class="arr">↓</span></a></li>
+          <li><a href="#materialy"><span class="k">📦</span><span>Материалы для скачивания</span><span class="arr">↓</span></a></li>
+          <li><a href="#dz"><span class="k">📝</span><span>Домашнее задание</span><span class="arr">↓</span></a></li>
+          <li><a href="#proverka"><span class="k">🧪</span><span>Проверь себя</span><span class="arr">↓</span></a></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===== LOGIKA ===== -->
+    <section class="sec" id="logika">
+      <h2 class="sec-title">🗺 Вся логика модуля на одной картинке</h2>
+      <figure class="scheme">
+        <button class="scheme__frame" type="button" data-zoom aria-label="Открыть схему крупно">
+          <img src="img/01-logika-modulya.webp" width="1800" height="434" alt="Логика модуля 5: лид-магнит → 5 смысловых баз (проблемы, мечты, мифы, барьеры, фишки) → контент-заготовки, 30+ заходов → рилсы, карусели, треды, посты → раз в месяц анализ, углубляем и перевыкладываем.">
+          <span class="scheme__zoom">⤢ Крупнее</span>
+        </button>
+      </figure>
+      <div class="co co--yellow">
+        <div class="co__ico">💡</div>
+        <div class="co__body"><p><b>Короткий контент не учит, а цепляет и ведёт на лид-магнит.</b> Поэтому его не нужно каждый раз сочинять заново: достаточно найти заходы, которые работают, и <b>повторять их в разных углах и форматах</b>.</p></div>
+      </div>
+    </section>
+
+    <!-- ===== УРОК 1 ===== -->
+    <section class="sec" id="urok-1">
+      <div class="lesson-label"><span class="num">Урок 1</span></div>
+      <h2 class="sec-title">Почему эксперты выгорают от контента</h2>
+
+      <h3>🔥 Как обычно выглядит создание контента</h3>
+      <ul>
+        <li>Пришла идея → <b>3-4 часа</b> пишете и вылизываете пост → выложили → <b>не зашло</b> → разочарование.</li>
+        <li>Хватает <b>5-7 таких попыток</b>, чтобы человек забросил блог. Даже те, кто выкладывает сотни рилсов на силе воли, в итоге выгорают.</li>
+      </ul>
+
+      <h3>🧨 Две причины выгорания</h3>
+      <ol>
+        <li><b>Каждый пост как произведение искусства.</b> Эксперт вкладывает в каждую публикацию слишком много сил и эмоций.</li>
+        <li><b>Каждый пост одноразовый.</b> Он не связан с лид-магнитом, никуда не ведёт и не приносит результата, поэтому каждый раз всё начинается с нуля.</li>
+      </ol>
+      <div class="co co--blue co--lead">
+        <div class="co__ico">📌</div>
+        <div class="co__body">
+          <p><b>К короткому продающему контенту подходим не как к творчеству, а как к экзаменационному сочинению по блокам.</b></p>
+          <p>Есть понятные блоки, которые останавливают человека и вызывают интерес. Собрали контент из этих блоков, и он работает, даже если вам он кажется «на троечку».</p>
+        </div>
+      </div>
+
+      <h3>✅ Что из этого следует</h3>
+      <ul>
+        <li><b>Короткий контент не должен учить.</b> За 10-30 секунд нельзя изменить картину мира. Его задача: <b>остановить человека, который узнал себя, и вызвать желание посмотреть больше</b>.</li>
+        <li><b>Не нужно каждый раз поражать.</b> Человеку интересно то, что волнует его прямо сейчас, а не развлечения.</li>
+        <li><b>Не нужно каждый раз публиковать новое.</b> Люди не помнят, что было неделю назад, а за 3-4 месяца до <b>30%</b> аудитории блога меняется.</li>
+        <li><b>Не нужно искать новые инсайты.</b> У людей в вашей теме <b>одни и те же</b> проблемы, страхи и мифы.</li>
+      </ul>
+      <div class="co co--green">
+        <div class="co__ico">🧱</div>
+        <div class="co__body"><p><b>Контент перестаёт быть творчеством и становится конструктором.</b> Не придумываем новое, а <b>говорим одно и то же немного по-разному</b>.</p></div>
+      </div>
+
+      <div class="summary">
+        <div class="summary__h"><span class="tick">✓</span>Главное из урока 1</div>
+        <ul>
+          <li>Выгорают из-за <b>неправильного подхода</b>, а не из-за нехватки идей.</li>
+          <li>Контент собирается <b>по блокам</b>, а не рождается как произведение.</li>
+          <li>Короткий контент <b>цепляет и ведёт на лид-магнит</b>, а не учит.</li>
+          <li>Новое придумывать не нужно: <b>повторяйте то, что цепляет</b>.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== УРОК 2 ===== -->
+    <section class="sec" id="urok-2">
+      <div class="lesson-label"><span class="num">Урок 2</span></div>
+      <h2 class="sec-title">Три лайфхака бесконечного контента</h2>
+
+      <h3>1️⃣ Одна мысль под разными углами</h3>
+      <figure class="scheme">
+        <button class="scheme__frame" type="button" data-zoom aria-label="Открыть схему крупно">
+          <img src="img/02-odna-mysl-raznye-ugly.webp" width="1774" height="866" loading="lazy" alt="Одна мысль лид-магнита, четыре захода к одному лид-магниту: только думает о разводе, договаривается мирно, ипотека на мужа, миф «всё пополам».">
+          <span class="scheme__zoom">⤢ Крупнее</span>
+        </button>
+      </figure>
+      <ul>
+        <li>Западные копирайтеры называют это <b>умножением углов захода</b>. Продукт, лид-магнит и смысл одни, меняется <b>заход</b>.</li>
+        <li>Зачем: люди с одной проблемой находятся <b>в разных ситуациях</b> и описывают её по-разному. Каждого цепляет своя формулировка.</li>
+        <li>Разные заходы часто <b>догоняют одних и тех же людей</b>: с первого рилса человек не посмотрел лид-магнит, а третий его дожал.</li>
+        <li>В рилсе обычно меняется <b>только начало (хук)</b>, остальной текст можно оставить тем же.</li>
+      </ul>
+      <details class="q q--example">
+        <summary><span><b>Пример: один лид-магнит, разные заходы</b> (раскройте)</span></summary>
+        <div class="ans">
+          <p>Лид-магнит юриста по разводам: «3 ошибки мирного развода, которые стоят половины имущества».</p>
+          <ul>
+            <li><b>Для той, кто только думает о разводе:</b> «Решили развестись? Не говорите мужу, пока не сделали эти шаги».</li>
+            <li><b>Для той, кто договаривается мирно:</b> «Фраза „договоримся по-хорошему“ обойдётся вам при разводе дороже всего».</li>
+            <li><b>Для тех, у кого ипотека:</b> «Квартира в ипотеке и оформлена на мужа. Что вам достанется при разводе?»</li>
+            <li><b>Через миф:</b> «„Всё, что куплено в браке, делится пополам“. Не всегда».</li>
+          </ul>
+        </div>
+      </details>
+      <div class="co co--red">
+        <div class="co__ico">🚫</div>
+        <div class="co__body"><p><b>Деление контента на «информационный, развлекательный, продающий» можно забыть.</b> Есть контент, который <b>цепляет</b> людей, и контент, который <b>не цепляет</b>.</p></div>
+      </div>
+
+      <h3>2️⃣ У контента всегда есть второй шанс</h3>
+      <ul>
+        <li><b>Не залетел рилс?</b> Выложите его ещё 2-3 раза: часто он залетает на третий-четвёртый раз.</li>
+        <li><b>Залетел?</b> Значит, вы попали в живую проблему удачной формулировкой. <b>Повторяйте</b> его.</li>
+        <li>Обычно хорошо заходят <b>10-30%</b> роликов из пачки. Это не повод срочно снимать новое.</li>
+        <li>Правило <b>90 дней</b>: контент можно повторять раз в 90 дней. Правило <b>60-90 единиц</b>: достаточно сделать столько сильного контента и дальше повторять.</li>
+        <li>Чтобы площадка не ругалась на повтор, <b>меняйте начало, обложку или обработку</b>.</li>
+      </ul>
+
+      <h3>3️⃣ Один смысл в разных форматах</h3>
+      <ul>
+        <li>Один смысл публикуем <b>рилсом, каруселью, тредом, постом в Telegram, сторис</b>. Для аудитории это не повтор: люди потребляют контент по-разному.</li>
+        <li>Текст не копируем дословно: у каждого формата <b>свои правила</b>, но смысл тот же.</li>
+      </ul>
+
+      <h3>🧮 Сколько контента даёт один лид-магнит</h3>
+      <div class="table-wrap t-compact">
+        <table>
+          <thead><tr><th>Формат</th><th>Количество</th></tr></thead>
+          <tbody>
+            <tr><td>Углы захода на одну проблему</td><td>~40</td></tr>
+            <tr><td>Карусели</td><td>~40</td></tr>
+            <tr><td>Посты в Telegram</td><td>20-30</td></tr>
+            <tr><td>Рилсы</td><td>20-30</td></tr>
+            <tr class="r-total"><td><b>Итого на 1 лид-магнит</b></td><td><b>100+ единиц контента</b></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="co co--purple">
+        <div class="co__ico">🛡</div>
+        <div class="co__body"><p><b>Обычный блог</b> каждый месяц требует столько же сил. <b>Антихрупкий блог</b> с каждым месяцем становится легче: каждая единица остаётся в запасе, залетевшие повторяются, сработавшие углы углубляются.</p></div>
+      </div>
+
+      <h3>🔁 Рабочий ритм</h3>
+      <ol>
+        <li><b>Лид-магнит</b>, к которому ведёт весь короткий контент.</li>
+        <li><b>Контент-заготовки</b> под лид-магнит.</li>
+        <li><b>Рилсы, карусели, треды и посты</b> из заготовок.</li>
+        <li><b>Раз в месяц аналитика:</b> смотрим, что привело людей <b>в воронку</b> (а не просто лайки), углубляем сработавшие углы и перевыкладываем сильный контент.</li>
+      </ol>
+
+      <div class="summary">
+        <div class="summary__h"><span class="tick">✓</span>Главное из урока 2</div>
+        <ul>
+          <li><b>Одна мысль, много углов захода:</b> меняется начало, смысл тот же.</li>
+          <li><b>Второй шанс:</b> перевыкладывайте и повторяйте то, что залетело.</li>
+          <li><b>Один смысл, разные форматы:</b> рилс, карусель, тред, пост.</li>
+          <li>1 лид-магнит = <b>100+ единиц контента</b>.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== УРОК 3 ===== -->
+    <section class="sec" id="urok-3">
+      <div class="lesson-label"><span class="num">Урок 3</span></div>
+      <h2 class="sec-title">Контент-заготовки</h2>
+      <figure class="scheme">
+        <button class="scheme__frame" type="button" data-zoom aria-label="Открыть схему крупно">
+          <img src="img/03-dva-shaga.webp" width="1758" height="689" loading="lazy" alt="Два шага работы с контентом: шаг 1, смысл, работа маркетолога, контент-заготовки; шаг 2, текст, работа копирайтера, рилс, карусель, тред, пост.">
+          <span class="scheme__zoom">⤢ Крупнее</span>
+        </button>
+      </figure>
+
+      <h3>🧠 Почему контент даётся тяжело</h3>
+      <ul>
+        <li>Создание контента это <b>две разные работы</b>: придумать смысл (работа маркетолога) и написать текст (работа копирайтера).</li>
+        <li>Делать их <b>одновременно</b> очень энергозатратно. При регулярном контенте так выгорают все.</li>
+      </ul>
+      <div class="co co--blue co--lead">
+        <div class="co__ico">📌</div>
+        <div class="co__body">
+          <p><b>Разделяем работу на два шага:</b></p>
+          <ol>
+            <li>Сначала делаем <b>10-20 контент-заготовок</b>.</li>
+            <li>Потом спокойно разворачиваем их в нужный формат: <b>рилс, карусель, тред или пост</b>.</li>
+          </ol>
+        </div>
+      </div>
+
+      <h3 id="zagotovka">📄 Что такое контент-заготовка</h3>
+      <ul>
+        <li><b>Короткий законченный текст из 4-6 абзацев</b>, который полностью раскрывает смысл одной единицы контента.</li>
+        <li>Из неё быстро делается <b>любой формат</b>, и это хорошее <b>сырьё для ИИ</b>: от того, что вы дадите нейросети, результат зависит на 90%.</li>
+      </ul>
+
+      <h4 class="sub"><span class="sub__n">?</span>Из чего она состоит</h4>
+      <figure class="scheme">
+        <button class="scheme__frame" type="button" data-zoom aria-label="Открыть схему крупно">
+          <img src="img/04-bloki-zagotovki.webp" width="1800" height="382" loading="lazy" alt="Блоки контент-заготовки: 1 проблема → 2 очевидная причина → 3 инсайт → 4 конкретика → 5 переход к лид-магниту.">
+          <span class="scheme__zoom">⤢ Крупнее</span>
+        </button>
+      </figure>
+      <div class="table-wrap t-compact">
+        <table>
+          <thead><tr><th>Блок</th><th>Что делает</th></tr></thead>
+          <tbody>
+            <tr><td><b>1. Проблема</b></td><td>Называем ситуацию так, чтобы человек <b>узнал себя</b></td></tr>
+            <tr><td><b>2. Очевидная причина</b></td><td>То, на что человек привык грешить, стереотип ниши</td></tr>
+            <tr class="r-yellow"><td><b>3. Инсайт</b></td><td><b>«Дело не в этом, а вот в чём».</b> Настоящая причина и короткая причинно-следственная связь</td></tr>
+            <tr><td><b>4. Конкретика</b></td><td>Что закрывает эту причину: фишка лид-магнита или продукта, которая создаёт интригу</td></tr>
+            <tr><td><b>5. Переход к лид-магниту</b></td><td>Что человек получит и <b>зачем ему туда идти</b></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <ul>
+        <li>Порядок блоков можно менять. Главное, чтобы <b>все были на месте</b>.</li>
+        <li>Это тот же <b>смысловой сдвиг</b>, что в <a href="https://asp-modul-3.vercel.app/#sdvig">лид-магните</a>, только сжатый до минуты. Задача <b>не научить, а заинтриговать</b>.</li>
+      </ul>
+
+      <h3>🗂 Откуда берутся заготовки: 5 смысловых баз</h3>
+      <p>Генератор идей сам собирает их из вашего лид-магнита. Руками делать не нужно, но <b>понимать важно</b>.</p>
+      <div class="table-wrap t-compact">
+        <table>
+          <thead><tr><th>База</th><th>Что это</th></tr></thead>
+          <tbody>
+            <tr><td><b>1. Проблемы и ситуации</b></td><td>Конкретные моменты жизни клиента, из-за которых он ищет решение</td></tr>
+            <tr><td><b>2. Результаты мечты</b></td><td>Как клиент хочет, чтобы выглядело идеальное решение</td></tr>
+            <tr><td><b>3. Мифы</b></td><td>Во что человек верит, но это не так</td></tr>
+            <tr><td><b>4. Барьеры</b></td><td>Что останавливает человека, который уже начал движение</td></tr>
+            <tr class="r-yellow"><td><b>5. Фишки продукта</b></td><td>Части и возможности вашего продукта. <b>Работают как мостик к продукту</b></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="co co--green">
+        <div class="co__ico">🧩</div>
+        <div class="co__body"><p><b>Формула заготовки:</b> проблема (человек узнаёт себя) + миф, барьер или мечта + настоящая причина + фишка продукта. Чем больше элементов в каждой базе, тем больше комбинаций, а значит, <b>идей для контента бесконечно много</b>.</p></div>
+      </div>
+
+      <h3>⚙️ Как это работает на практике</h3>
+      <ol>
+        <li>Загружаете в <b>Генератор идей</b> лид-магнит или файл «О лид-магните».</li>
+        <li>Он собирает 5 баз и выдаёт <b>15-20 заготовок</b> за раз.</li>
+        <li>Вы <b>выбираете те, что правда есть в вашей нише</b>.</li>
+        <li>Просите ещё: больше заготовок, заход через конкретный смысл, <b>больше широких заходов</b>, короче или длиннее.</li>
+        <li>Отдаёте выбранные заготовки <b>копирайтерам</b>.</li>
+      </ol>
+      <div class="co co--red">
+        <div class="co__ico">⚠️</div>
+        <div class="co__body"><p><b>Валидация обязательна.</b> ИИ хорошо комбинирует, но только вы знаете, что реально говорят ваши клиенты. Плохо провалидировали, и контент не попадёт в проблему.</p></div>
+      </div>
+
+      <div class="summary">
+        <div class="summary__h"><span class="tick">✓</span>Главное из урока 3</div>
+        <ul>
+          <li>Разделяйте <b>придумывание смысла</b> и <b>написание текста</b>.</li>
+          <li>Контент-заготовка: <b>проблема → очевидная причина → инсайт → конкретика → переход к лид-магниту</b>.</li>
+          <li>Заготовки рождаются из <b>5 смысловых баз</b>.</li>
+          <li>Из одной заготовки получается <b>любой формат</b>.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== УРОК 4 ===== -->
+    <section class="sec" id="urok-4">
+      <div class="lesson-label"><span class="num">Урок 4</span></div>
+      <h2 class="sec-title">Как сделать, чтобы контент залетал</h2>
+
+      <h3>📡 Как работает рекомендательный трафик</h3>
+      <ul>
+        <li>Платформа показывает контент <b>небольшой группе людей</b> и смотрит на их реакцию. Так работают все соцсети, YouTube и поиск.</li>
+        <li>Задача платформы: <b>удержать людей у себя</b> как можно дольше. Поэтому она продвигает то, что люди смотрят.</li>
+        <li>Монтаж, музыка и тренды влияют, но <b>не они первопричина</b>.</li>
+      </ul>
+      <div class="co co--blue co--lead">
+        <div class="co__ico">📌</div>
+        <div class="co__body">
+          <p><b>Залетит контент или нет, решают две вещи:</b></p>
+          <ol>
+            <li><b>Охват:</b> сколько людей <b>остановились</b>. Зависит от того, узнают ли они себя в проблеме.</li>
+            <li><b>Удержание:</b> сколько людей <b>досмотрели</b>. Зависит от того, как построен сценарий.</li>
+          </ol>
+        </div>
+      </div>
+      <ul>
+        <li>«Залетел» не значит миллионы просмотров. Достаточно, чтобы контент <b>вышел на холодную аудиторию</b>: экспертный ролик на 300 тыс. просмотров может привести десятки тысяч подписчиков.</li>
+      </ul>
+
+      <h3 id="ohvat">🎯 Охват: говорите на языке жизни клиента</h3>
+      <ul>
+        <li>Эксперты часто <b>говорят слишком сложно</b>, профессиональным языком. Останавливаются только те, кто уже глубоко в теме.</li>
+      </ul>
+      <div class="cols">
+        <div class="co">
+          <div class="co__ico">🎓</div>
+          <div class="co__body">
+            <p><b>Язык эксперта</b></p>
+            <p>Проблема в ваших терминах: «Как поднять ферритин». Понятен не всем.</p>
+          </div>
+        </div>
+        <div class="co co--green">
+          <div class="co__ico">🏠</div>
+          <div class="co__body">
+            <p><b>Язык жизни клиента</b></p>
+            <p>Последствия проблемы в жизни: «Почему вас бесят собственные муж и дети». Понятен всем, кто это проживает.</p>
+          </div>
+        </div>
+      </div>
+
+      <h4 class="sub"><span class="sub__n">1</span>Широкие, средние и узкие заходы</h4>
+      <figure class="scheme">
+        <button class="scheme__frame" type="button" data-zoom aria-label="Открыть схему крупно">
+          <img src="img/05-shirokie-uzkie-zahody.webp" width="1800" height="513" loading="lazy" alt="Широкий заход: последствия в жизни, почему бесят муж и дети. Средний: ощущаемая проблема, устаю к обеду, хотя сплю 8 часов. Узкий: экспертный язык, как поднять ферритин. Все ведут на лид-магнит.">
+          <span class="scheme__zoom">⤢ Крупнее</span>
+        </button>
+      </figure>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Заход</th><th>Что это</th><th>Что даёт</th></tr></thead>
+          <tbody>
+            <tr><td><b>Широкий</b></td><td>Жизненная ситуация, которая стоит за проблемой. Человек может не знать, что у него проблема</td><td><b>Большой охват</b> и поток в воронку</td></tr>
+            <tr><td><b>Средний</b></td><td>Конкретная проблема, которую человек уже ощущает, но не знает причину</td><td>Баланс охвата и целевых людей</td></tr>
+            <tr><td><b>Узкий</b></td><td>Через ваше решение и экспертное название проблемы</td><td>Готовые к покупке, но <b>маленький охват</b></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="table-hint">← Таблицу можно листать вбок →</p>
+      <div class="co co--orange">
+        <div class="co__ico">⚠️</div>
+        <div class="co__body"><p><b>Широкий заход не значит «обо всём подряд».</b> Он обязан быть <b>в векторе вашей темы</b>: вы поднимаетесь на несколько уровней над проблемой и смотрите на её последствия.</p></div>
+      </div>
+
+      <h4 class="sub" id="rasshirenie"><span class="sub__n">2</span>Технология расширения темы</h4>
+      <figure class="scheme">
+        <button class="scheme__frame" type="button" data-zoom aria-label="Открыть схему крупно">
+          <img src="img/06-rasshirenie-temy.webp" width="1800" height="576" loading="lazy" alt="Технология расширения темы: 1 нерешённая проблема → 2 пять вопросов о последствиях (состояние, поведение, отношения, самооценка, будущее) → 3 мостик к продукту.">
+          <span class="scheme__zoom">⤢ Крупнее</span>
+        </button>
+      </figure>
+      <ol>
+        <li><b>Определите нерешённую проблему</b> клиента.</li>
+        <li><b>Задайте 5 вопросов о последствиях</b> этой проблемы в жизни человека:
+          <ul class="qlist">
+            <li><b>Состояние:</b> что он чувствует в течение дня или недели?</li>
+            <li><b>Поведение:</b> что он из-за этого перестал делать или упускает?</li>
+            <li><b>Отношения:</b> как это отражается на близких и окружении? <b>Самый сильный вопрос.</b></li>
+            <li><b>Самооценка:</b> как он сам себе объясняет происходящее?</li>
+            <li><b>Будущее:</b> что он может из-за этого потерять?</li>
+          </ul>
+        </li>
+        <li><b>Постройте мостик</b> к вашей теме и продукту: «вы думаете, дело в этом, а причина может быть вот в чём».</li>
+      </ol>
+
+      <h3>⏱ Удержание: глубина просмотра</h3>
+      <div class="co co--red co--lead">
+        <div class="co__ico">🔑</div>
+        <div class="co__body"><p><b>Главная метрика во всех форматах: глубина просмотра.</b> Площадки продвигают то, что люди не бросают.</p></div>
+      </div>
+      <div class="table-wrap t-compact">
+        <table>
+          <thead><tr><th>Формат</th><th>Что важно</th></tr></thead>
+          <tbody>
+            <tr><td><b>Рилс</b></td><td>Досматривают больше <b>20%</b> ролика → он начинает лететь. <b>Хук-блок</b> на 5-7 секунд (не один заголовок, а несколько фраз), <b>новый поворот каждые 10-15 секунд</b>, в конце мостик и кодовое слово</td></tr>
+            <tr><td><b>Карусель</b></td><td>Чем дальше листают, тем лучше. Важны <b>заголовок каждого слайда</b> и <b>последняя строка</b>, которая переводит на следующий</td></tr>
+            <tr><td><b>Тред</b></td><td><b>Первая строка решает всё:</b> откроют ветку или нет. Ветки до 500 знаков, каждая углубляет мысль</td></tr>
+            <tr><td><b>Пост в Telegram</b></td><td>Структура, которая доводит человека <b>до оффера</b> в конце</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <ul>
+        <li><b>Хук это не заголовок, а петля удержания:</b> остановили, а потом интригуем, чтобы хотелось смотреть дальше.</li>
+        <li>Проверяйте себя: <b>интересно ли листать следующий слайд, читать следующий абзац?</b> Стало скучно, дорабатывайте.</li>
+      </ul>
+      <details class="q q--example">
+        <summary><span><b>Пример широкой контент-заготовки</b> (раскройте)</span></summary>
+        <div class="ans">
+          <p><b>Почему вас бесят собственные муж и дети?</b></p>
+          <p>Вы срываетесь на близких из-за мелочей, а потом весь вечер вините себя. Кажется, что дело в характере или что вы плохая мать.</p>
+          <p>Но раздражительность часто начинается не в голове, а в теле. Одна из частых причин: дефицит железа. Без него нервной системе не хватает ресурса, и любая мелочь становится последней каплей.</p>
+          <p>При этом анализы могут быть в норме: обычный анализ показывает железо «в работе», а не его запас.</p>
+          <p>В бесплатном видео показываю, какие анализы сдать и как понять, что дело в железе, а не в вас.</p>
+        </div>
+      </details>
+      <div class="co co--green">
+        <div class="co__ico">👀</div>
+        <div class="co__body"><p><b>Насмотренность:</b> сохраняйте в отдельную папку рилсы, карусели и посты в своей теме, которые вас зацепили, и разбирайте, <b>чем именно они удержали</b>.</p></div>
+      </div>
+
+      <div class="summary">
+        <div class="summary__h"><span class="tick">✓</span>Главное из урока 4</div>
+        <ul>
+          <li>Залетает то, где <b>много людей остановились</b> и <b>досмотрели</b>.</li>
+          <li>Охват даёт <b>язык жизни клиента</b> и <b>широкие заходы</b> в векторе темы.</li>
+          <li>Расширение темы: <b>проблема → 5 вопросов о последствиях → мостик к продукту</b>.</li>
+          <li>Главная метрика: <b>глубина просмотра</b>. В рилсе это 20%+.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== СЛОВАРЬ ===== -->
+    <section class="sec" id="slovar">
+      <h2 class="sec-title">📖 Словарь модуля</h2>
+      <dl class="gloss">
+        <div class="term"><dt>Антихрупкий контент</dt><dd>Контент, который не сгорает: остаётся в запасе, повторяется и с каждым месяцем облегчает работу</dd></div>
+        <div class="term"><dt>Угол захода</dt><dd>Разная подача одной и той же мысли для людей в разных ситуациях</dd></div>
+        <div class="term"><dt>Контент-заготовка</dt><dd>Короткий текст на 4-6 абзацев, из которого делается любой формат контента</dd></div>
+        <div class="term"><dt>Смысловые базы</dt><dd>Проблемы, мечты, мифы, барьеры и фишки продукта, из которых собираются заготовки</dd></div>
+        <div class="term"><dt>Широкий заход</dt><dd>Заход через последствия проблемы в жизни человека, который даёт большой охват</dd></div>
+        <div class="term"><dt>Расширение темы</dt><dd>Технология: проблема → 5 вопросов о последствиях → мостик к продукту</dd></div>
+        <div class="term"><dt>Глубина просмотра</dt><dd>Насколько далеко человек досмотрел, долистал или дочитал контент</dd></div>
+        <div class="term"><dt>Хук-блок</dt><dd>Первые 5-7 секунд ролика: несколько фраз, которые останавливают и интригуют</dd></div>
+      </dl>
+    </section>
+
+    <!-- ===== МАТЕРИАЛЫ ===== -->
+    <section class="sec" id="materialy">
+      <h2 class="sec-title">📦 Материалы для скачивания</h2>
+      <div class="co co--red">
+        <div class="co__ico">⚠️</div>
+        <div class="co__body"><p><b>Выбирайте только те заготовки, которые правда есть в вашей нише:</b> то, что реально говорят и с чем приходят ваши клиенты. Остальное ИИ может красиво выдумать.</p></div>
+      </div>
+
+      <div class="co co--purple co--lead">
+        <div class="co__ico">💡</div>
+        <div class="co__body">
+          <p><b>ИИ-ассистент №7. Генератор идей</b></p>
+          <p>Разбирает лид-магнит на смыслы, сам собирает 5 смысловых баз и выдаёт <b>контент-заготовки</b>, сгруппированные «через…»: через ошибку, через миф, через ситуацию клиента. По 15-20 за раз, обычно набирается <b>30+</b>. Отдельно даёт <b>широкие заходы</b>.</p>
+          <p><b>Берёт:</b> <a href="https://asp-modul-3.vercel.app/#materialy">«03 Лид-магнит», «03 О лид-магните»</a>, <a href="https://asp-modul-2.vercel.app/#materialy">«02 ДНК воронки»</a>, <a href="https://asp-modul-1.vercel.app/#materialy">«01 Фактура»</a>. <b>Отдаёт:</b> «05 Контент-заготовки».</p>
+        </div>
+      </div>
+      <div class="dl-badge"><span class="ico">📦</span><span>Скачайте ассистента (ZIP для установки) с платформы внутри 5 модуля</span></div>
+
+      <div class="co co--purple co--lead">
+        <div class="co__ico">✍️</div>
+        <div class="co__body">
+          <p><b>ИИ-ассистенты: 4 копирайтера</b></p>
+          <p>Пишут готовый контент по заготовкам или любому вашему материалу: мысли, голосовому, старому посту, расшифровке эфира. Загрузите свои посты, и они соберут <b>«Голос эксперта»</b>, чтобы все тексты звучали как вы.</p>
+          <ul>
+            <li><b>Копирайтер рилсов:</b> хук-блок, повороты каждые 10-15 секунд, мост и кодовое слово</li>
+            <li><b>Копирайтер каруселей:</b> обложка, слайды с заголовками и переходами, CTA-слайд, пометки для дизайнера</li>
+            <li><b>Копирайтер тредов:</b> первая строка, ветки до 500 знаков, ветка-ссылка в Telegram, финал с вопросом</li>
+            <li><b>Копирайтер Telegram-постов:</b> 12 форматов, серии прогрева и контент-план</li>
+          </ul>
+        </div>
+      </div>
+      <div class="dl-badge"><span class="ico">📦</span><span>Скачайте копирайтеров (ZIP для установки) с платформы внутри 5 модуля</span></div>
+
+      <p><b>Как работать:</b></p>
+      <ol>
+        <li>Скачайте ZIP-файлы с платформы (5 модуль), распаковывать не нужно, и установите ассистентов по инструкции из урока.</li>
+        <li>Загрузите в <b>Генератор идей</b> лид-магнит и «О лид-магните».</li>
+        <li><b>Отметьте лучшие заготовки</b> и при необходимости попросите ещё или больше широких заходов.</li>
+        <li>Идите с заготовками к <b>копирайтеру</b>. Начните <b>с одного формата</b>, а не со всех четырёх.</li>
+        <li>Публикуйте и раз в месяц смотрите, <b>что привело людей в воронку</b>.</li>
+      </ol>
+      <div class="co co--green">
+        <div class="co__ico">🏆</div>
+        <div class="co__body"><p><b>Быстрая победа модуля:</b> чистого листа больше нет. Берёте заготовку, выбираете формат, получаете текст.</p></div>
+      </div>
+    </section>
+
+    <!-- ===== ДЗ ===== -->
+    <section class="sec" id="dz">
+      <h2 class="sec-title">📝 Домашнее задание</h2>
+      <p class="hw-count" id="hwCount" aria-live="polite">Выполнено 0 из 7</p>
+      <div class="hw" id="hw">
+        <label><input type="checkbox" data-hw="1"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span class="txt"><b>Получите 30+ контент-заготовок</b> в Генераторе идей под ваш лид-магнит.</span></label>
+        <label><input type="checkbox" data-hw="2"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span class="txt"><b>Отберите 10-15</b>, которые правда про ваших клиентов.</span></label>
+        <label><input type="checkbox" data-hw="3"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span class="txt"><b>Сделайте хотя бы 3 широких захода</b> по <a href="#rasshirenie">технологии расширения темы</a>.</span></label>
+        <label><input type="checkbox" data-hw="4"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span class="txt"><b>Выберите один формат</b> и сделайте 5-10 единиц контента с копирайтером.</span></label>
+        <label><input type="checkbox" data-hw="5"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span class="txt"><b>Опубликуйте</b> и через месяц проверьте: что привело людей в воронку.</span></label>
+        <label><input type="checkbox" data-hw="6"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span class="txt"><b>Перевыложите или переснимите</b> то, что сработало.</span></label>
+        <label><input type="checkbox" data-hw="7"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span class="txt"><b>Соберите папку насмотренности</b> из контента в вашей теме, который вас зацепил.</span></label>
+      </div>
+    </section>
+
+    <!-- ===== ПРОВЕРЬ СЕБЯ ===== -->
+    <section class="sec" id="proverka">
+      <h2 class="sec-title">🧪 Проверь себя</h2>
+      <p style="color:var(--muted)">Сначала ответьте сами, потом нажмите на вопрос.</p>
+      <details class="q"><summary>Почему эксперты выгорают от контента?</summary><div class="ans">Делают каждый пост <b>как произведение искусства</b>, и каждый пост <b>одноразовый</b>: никуда не ведёт и не приносит результата.</div></details>
+      <details class="q"><summary>Какая задача у короткого контента?</summary><div class="ans"><b>Остановить человека, который узнал себя, и привести на лид-магнит.</b> Не учить.</div></details>
+      <details class="q"><summary>Назовите три лайфхака бесконечного контента.</summary><div class="ans"><b>Одна мысль под разными углами, второй шанс у контента, один смысл в разных форматах.</b></div></details>
+      <details class="q"><summary>Из каких блоков состоит контент-заготовка?</summary><div class="ans"><b>Проблема → очевидная причина → инсайт → конкретика → переход к лид-магниту.</b></div></details>
+      <details class="q"><summary>Какие 5 смысловых баз лежат под заготовками?</summary><div class="ans"><b>Проблемы и ситуации, результаты мечты, мифы, барьеры, фишки продукта.</b></div></details>
+      <details class="q"><summary>Какие две вещи решают, залетит ли контент?</summary><div class="ans"><b>Охват</b> (сколько остановились) и <b>удержание</b> (сколько досмотрели).</div></details>
+      <details class="q"><summary>Как сделать узкую экспертную тему охватной?</summary><div class="ans"><b>Расширение темы:</b> проблема → 5 вопросов о последствиях в жизни (состояние, поведение, отношения, самооценка, будущее) → мостик к продукту.</div></details>
+      <details class="q"><summary>Какая главная метрика удержания в рилсах?</summary><div class="ans"><b>Глубина просмотра:</b> досматривают больше <b>20%</b> ролика.</div></details>
+
+      <div class="final">
+        <div class="final__ico" aria-hidden="true">🔄</div>
+        <p><b>Что дальше: второй круг.</b> Когда первая воронка работает и пошли первые заявки: добавьте мини-продукт (если его не было), сделайте <b>второй лид-магнит</b> или мини-воронку под другой сегмент, подключите остальные форматы контента, разберите трафик и усильте КЭВ.</p>
+      </div>
+
+      <div class="nav-pair">
+        <a class="prev" href="https://asp-modul-4.vercel.app/">
+          <span class="prev__arr" aria-hidden="true">←</span>
+          <span><span class="prev__k">Назад</span>Модуль 4. Прибыльный мини-продукт</span>
+        </a>
+        <a class="next" href="https://asp-modul-1.vercel.app/">
+          <div class="next__arr" aria-hidden="true">↺</div>
+          <p><b>Начать второй круг: Модуль 1.</b> Вернуться к началу и собрать следующую мини-воронку.</p>
+          <span class="next__go">Открыть модуль 1</span>
+        </a>
+      </div>
+    </section>
+
+    <footer>© Dmitriymarketing School · Практикум «Антихрупкая система продаж» · Материалы только для участников</footer>
+
+  </main>
+</div>
+
+<a class="fab" id="fab" href="#oglavlenie"><span class="dot"></span>Оглавление</a>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Схема крупно">
+  <div class="lb__bar"><span id="lbHint">Листайте схему пальцем</span><button class="lb__close" id="lbClose" type="button">Закрыть ✕</button></div>
+  <div class="lb__scroll" id="lbScroll"><img id="lbImg" alt=""></div>
+</div>
+
+<script>
+(function () {
+  var root = document.documentElement;
+  var KEY = 'dm-theme';
+
+  /* ---- theme ---- */
+  function current() {
+    var t = root.getAttribute('data-theme');
+    if (t) return t;
+    return window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  }
+  function paintLabel() {
+    var lbl = document.getElementById('themeLbl');
+    if (lbl) lbl.textContent = current() === 'dark' ? 'Светлая' : 'Тёмная';
+  }
+  document.getElementById('themeBtn').addEventListener('click', function () {
+    var next = current() === 'dark' ? 'light' : 'dark';
+    root.setAttribute('data-theme', next);
+    try { localStorage.setItem(KEY, next); } catch (e) {}
+    paintLabel();
+  });
+  if (window.matchMedia) {
+    var mq = matchMedia('(prefers-color-scheme: dark)');
+    if (mq.addEventListener) mq.addEventListener('change', paintLabel);
+  }
+  paintLabel();
+
+  /* ---- progress + fab ---- */
+  var bar = document.getElementById('progress');
+  var fab = document.getElementById('fab');
+  var toc = document.getElementById('oglavlenie');
+  function onScroll() {
+    var h = document.documentElement.scrollHeight - window.innerHeight;
+    var p = h > 0 ? (window.scrollY / h) * 100 : 0;
+    bar.style.width = p + '%';
+    var tocBottom = toc.getBoundingClientRect().bottom;
+    fab.classList.toggle('show', tocBottom < 0);
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  /* ---- active section in side nav ---- */
+  var links = Array.prototype.slice.call(document.querySelectorAll('#sideNav a'));
+  var map = {};
+  links.forEach(function (a) { map[a.getAttribute('href').slice(1)] = a; });
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting && map[e.target.id]) {
+          links.forEach(function (l) { l.classList.remove('is-active'); });
+          map[e.target.id].classList.add('is-active');
+        }
+      });
+    }, { rootMargin: '-30% 0px -65% 0px' });
+    Object.keys(map).forEach(function (id) { var el = document.getElementById(id); if (el) io.observe(el); });
+  }
+
+  /* ---- tabs ---- */
+  document.querySelectorAll('[data-tabs]').forEach(function (box) {
+    var tabs = Array.prototype.slice.call(box.querySelectorAll('[role="tab"]'));
+    function select(tab, focus) {
+      tabs.forEach(function (t) {
+        var on = t === tab;
+        t.setAttribute('aria-selected', on ? 'true' : 'false');
+        t.tabIndex = on ? 0 : -1;
+        document.getElementById(t.getAttribute('aria-controls')).hidden = !on;
+      });
+      if (focus) tab.focus();
+    }
+    tabs.forEach(function (t, i) {
+      t.addEventListener('click', function () { select(t); });
+      t.addEventListener('keydown', function (e) {
+        if (e.key === 'ArrowRight') { e.preventDefault(); select(tabs[(i + 1) % tabs.length], true); }
+        if (e.key === 'ArrowLeft') { e.preventDefault(); select(tabs[(i - 1 + tabs.length) % tabs.length], true); }
+      });
+    });
+  });
+
+  /* ---- homework checklist ---- */
+  var HW = 'dm-asp-m5-hw';
+  var boxes = Array.prototype.slice.call(document.querySelectorAll('#hw input'));
+  var saved = {};
+  try { saved = JSON.parse(localStorage.getItem(HW) || '{}') || {}; } catch (e) { saved = {}; }
+  function count() {
+    var n = boxes.filter(function (b) { return b.checked; }).length;
+    document.getElementById('hwCount').textContent = 'Выполнено ' + n + ' из ' + boxes.length;
+  }
+  boxes.forEach(function (b) {
+    if (saved[b.dataset.hw]) b.checked = true;
+    b.addEventListener('change', function () {
+      saved[b.dataset.hw] = b.checked;
+      try { localStorage.setItem(HW, JSON.stringify(saved)); } catch (e) {}
+      count();
+    });
+  });
+  count();
+
+  /* ---- lightbox ---- */
+  var lb = document.getElementById('lb'), lbImg = document.getElementById('lbImg'), lbScroll = document.getElementById('lbScroll');
+  var lastBtn = null;
+  function openLb(img, btn) {
+    lbImg.src = img.src; lbImg.alt = img.alt;
+    lb.classList.add('open'); document.body.style.overflow = 'hidden';
+    lastBtn = btn; lbScroll.scrollLeft = 0;
+    document.getElementById('lbClose').focus();
+  }
+  function closeLb() {
+    lb.classList.remove('open'); document.body.style.overflow = '';
+    if (lastBtn) lastBtn.focus();
+  }
+  document.querySelectorAll('[data-zoom]').forEach(function (btn) {
+    btn.addEventListener('click', function () { openLb(btn.querySelector('img'), btn); });
+  });
+  document.getElementById('lbClose').addEventListener('click', closeLb);
+  lb.addEventListener('click', function (e) { if (e.target === lb || e.target === lbScroll) closeLb(); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && lb.classList.contains('open')) closeLb(); });
+})();
+</script>
+</body>
+</html>
